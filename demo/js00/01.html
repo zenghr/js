@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul{list-style:none;}
+        a{text-decoration:none;}
+
+        .box{margin:100px 0 0 200px;position:relative;text-align:center;}
+        .box>li{width:100px;height:50px;background:#eee;border:1px solid #999;}
+        .box a{display:block;line-height:50px;color:#333;}
+        .box ul{position:absolute;top:51px;left:0;background:yellow;width:150px;border:1px solid #999;display:none;}
+        .box ul li{height:40px;line-height:40px;}
+    </style>
+    <script>
+        window.onload = function(){
+            var oLi = document.getElementById('menu');
+            var oA = document.getElementById('weibo');
+            var oUl = document.getElementById('subMenu');
+
+            oLi.onmouseover = show;
+            oLi.onmouseout = hide;
+
+            function show(){
+                oLi.style.backgroundColor = 'yellowgreen';
+                oUl.style.display = 'block';
+            }
+
+            function hide(){
+                oLi.style.backgroundColor = '#eee';
+                oUl.style.display = 'none';
+            }
+        };
+    </script>
+</head>
+<body>
+<ul class="box">
+    <li id="menu">
+        <a href="javascript:;" id="weibo">微博</a>
+        <ul id="subMenu">
+            <li>私信</li>
+            <li>评论</li>
+            <li>@我</li>
+        </ul>        
+    </li>
+</ul>
+</body>
+</html>

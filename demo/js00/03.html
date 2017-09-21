@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{width:200px;height:200px;background:yellowgreen;display:none;}
+    </style>
+    <script>
+        window.onload = ()=>{
+            var showBtn = document.getElementById('showBtn');
+            var hideBtn = document.getElementById('hideBtn');
+            var clickMe = document.getElementById('clickMe');
+            var oBox = document.getElementById('box');
+
+            showBtn.onclick = show;
+            clickMe.onclick = show;
+            function show(){
+                oBox.style.display = 'block';
+            }
+
+            hideBtn.onclick = ()=>{
+                oBox.style.display = 'none';
+            };
+        }
+    </script>
+</head>
+<body>
+    <button id="showBtn">显示</button>
+    <button id="hideBtn">隐藏</button>
+    <strong id="clickMe">点击我也可以显示</strong>
+    <div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul{list-style:none;}
+        button{border:none;outline:none;cursor:pointer;}
+
+        .wrap{width:800px;height:500px;background:#eee;padding:20px;margin:50px auto;position:relative;}
+        .top{height:50px;}
+        .top button{width:80px;height:40px;background:orange;color:#fff;}
+        .box{width:100px;height:100px;background:#ddd;border:1px solid #999;}
+        .choice{width:400px;background:#aaa;padding:20px;position:absolute;right:20px;bottom:20px;display:none;}
+        .choice_inner{background:#fff;padding:10px;}
+        .choice_inner li{text-align:center;line-height:50px;margin-bottom:5px;}
+        .choice_inner .btns{padding-top:10px;}
+        .choice_inner li span{display:inline-block;width:50px;height:50px;background:yellowgreen;color:#fff;vertical-align:middle;cursor:pointer;}
+        .choice_inner li .yellow{background:#fd0;}
+        .choice_inner li .blue{background:blue;}
+        .choice_inner li button{width:50px;height:50px;background:#eee;border:1px solid #999;color:#666;}
+        .choice_inner .btns button{width:80px;height:30px;line-height:30px;background:#009;color:#fff;}
+    </style>
+    <script>
+        window.onload = ()=>{
+            var oBtn = document.getElementById('btn');
+            var oBox = document.getElementById('box');
+            var oChoice = document.getElementById('choice');
+            var oRed = document.getElementById('red');
+            var oYellow = document.getElementById('yellow');
+            var oBlue = document.getElementById('blue');
+            var oW2 = document.getElementById('w2');
+            var oW3 = document.getElementById('w3');
+            var oW4 = document.getElementById('w4');
+            var oH2 = document.getElementById('h2');
+            var oH3 = document.getElementById('h3');
+            var oH4 = document.getElementById('h4');
+            var oRe = document.getElementById('re');
+            var oSu = document.getElementById('su');
+
+            oBtn.onclick = ()=>{
+                oChoice.style.display = 'block';
+            };
+
+            oRed.onclick = ()=>{
+                changeColor('red');
+            };
+            oYellow.onclick = ()=>{
+                changeColor('yellow');
+            };
+            oBlue.onclick = ()=>{
+                changeColor('blue');
+            };
+
+            oW2.onclick = ()=>{
+                changeWidth('200px');
+            };
+            oW3.onclick = ()=>{
+                changeWidth('300px');
+            };
+            oW4.onclick = ()=>{
+                changeWidth('400px');
+            };
+
+            oH2.onclick = ()=>{
+                changeHeight('200px');
+            };
+            oH3.onclick = ()=>{
+                changeHeight('300px');
+            };
+            oH4.onclick = ()=>{
+                changeHeight('400px');
+            };
+
+            oRe.onclick = ()=>{
+                oBox.style.width = '100px';
+                oBox.style.height = '100px';
+                oBox.style.backgroundColor = '#ddd';
+                oBox.style.border = '1px solid #999';
+
+            };
+
+            oSu.onclick = ()=>{
+                oChoice.style.display = 'none';
+            };
+
+            function changeColor(color){
+                oBox.style.backgroundColor = color;
+            }
+
+            function changeWidth(width){
+                oBox.style.width = width;
+            }
+
+            function changeHeight(height){
+                oBox.style.height = height;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="top">
+            <strong>请为下面的DIV设置样式：</strong>
+            <button id="btn">点击设置</button>
+        </div>
+        <div class="box" id="box"></div>
+        <div class="choice" id="choice">
+            <ul class="choice_inner">
+                <li>
+                    请选择背景色：
+                    <span class="red" id="red">红</span>
+                    <span class="yellow" id="yellow">黄</span>
+                    <span class="blue" id="blue">蓝</span>
+                </li>
+                <li>
+                    请选择宽(px)：
+                    <button id="w2">200</button>
+                    <button id="w3">300</button>
+                    <button id="w4">400</button>
+                </li>
+                <li>
+                    请选择高(px)：
+                    <button id="h2">200</button>
+                    <button id="h3">300</button>
+                    <button id="h4">400</button>
+                </li>
+                <li class="btns">
+                    <button id="re">恢复</button>
+                    <button id="su">确定</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
