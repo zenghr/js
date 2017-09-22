@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = ()=>{
+            var oTxt = document.getElementById('txt');
+            var oBtn = document.getElementById('btn');
+            var oPic = document.getElementById('pic');
+
+            oBtn.onclick = ()=>{
+                oPic.src = oTxt.value;  //属性操作
+            };
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="txt">
+<button type="button" id="btn">按钮</button>
+<p>这是一些描述文字</p>
+<img src="img/3.jpg" alt="" id="pic" width="300">
+</body>
+</html>

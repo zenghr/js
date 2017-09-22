@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = ()=>{
+            var oTxt = document.getElementById('txt');
+            var oBtn = document.getElementById('btn');
+            var oP = document.getElementById('p1');
+
+            oBtn.onclick = ()=>{
+                oP.innerHTML = oTxt.value;  //innerHTML
+            };
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="txt">
+<button type="button" id="btn">按钮</button>
+<p id="p1">这是一些描述文字</p>
+</body>
+</html>
