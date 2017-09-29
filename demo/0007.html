@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //打印三角
+        for(var i=5; i>0; i--){
+            for(var j=1;j<=5; j++){
+                if(j>=i){
+                    document.write('*');
+                }else{
+                    document.write('0');
+                }
+            }
+
+            document.write('<br>');
+        }
+
+        function fn(){
+
+        }
+
+        var a='全局';
+        function fn(){
+            var a='局部';
+            alert(a);
+        }
+
+        //fn();
+
+        //alert(a);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

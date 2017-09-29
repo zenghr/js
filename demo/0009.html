@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //找出最大值
+        var nums = [10,80,30];
+
+        function maxNumber(arr){
+            var maxNum = arr[0];
+
+            for(var i=0; i<arr.length; i++){
+                if(maxNum<arr[i]){
+                    maxNum = arr[i];
+                }
+            }
+
+            return maxNum;
+        }
+
+        var result = maxNumber(nums);
+        console.log(result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
